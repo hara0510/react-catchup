@@ -1,9 +1,12 @@
-import React from 'react';
+import { Button, ChakraProvider } from '@chakra-ui/react';
+import "./styles.css";
 
 const App = () => {
   return (
     <div>
-      <h1>Welcome to React Catch Up</h1>
+      <ChakraProvider>
+        <Button colorScheme='teal'>ボタン</Button>
+      </ChakraProvider>
     </div>
   );
 };
