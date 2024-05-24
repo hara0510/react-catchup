@@ -1,5 +1,5 @@
-import { FC } from "react";
+import { memo, FC } from "react";
 
-export const Login : FC = memo (() => {
+export const Login: FC = memo (() => {
   return <p>ログインページです</p>;
 });
