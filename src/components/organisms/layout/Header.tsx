@@ -1,8 +1,8 @@
 import { Box, Flex, Heading, Link, useDisclosure } from "@chakra-ui/react";
 import { memo, FC, useCallback } from "react";
 import { MenuIconButton } from "../../atoms/button/MenuIconButton";
-import { MenuDrawar } from "../../moleculs/MenuDrawar";
 import { useNavigate } from "react-router-dom";
+import { MenuDrawer } from "../../molecules/MenuDrawer";
 
 export const Header: FC = memo (() => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -49,7 +49,7 @@ export const Header: FC = memo (() => {
         </Flex>
         <MenuIconButton onOpen={onOpen} />
       </Flex>
-      <MenuDrawar onClose={onClose} isOpen={isOpen} />
+      <MenuDrawer onClose={onClose} isOpen={isOpen} onClickHome={onClickHome} onClickUserManagement={onClickUserManagement} onClickSetting={onClickSetting} />
     </>
   );
 });
