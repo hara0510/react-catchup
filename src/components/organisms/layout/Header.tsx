@@ -1,6 +1,7 @@
 import { Box, Button, Drawer, DrawerBody, DrawerContent, DrawerOverlay, Flex, Heading, IconButton, Link, useDisclosure } from "@chakra-ui/react";
 import { memo, FC } from "react";
 import { MenuIconButton } from "../../atoms/button/MenuIconButton";
+import { MenuDrawar } from "../../moleculs/MenuDrawar";
 
 export const Header: FC = memo (() => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -35,17 +36,7 @@ export const Header: FC = memo (() => {
         </Flex>
         <MenuIconButton onOpen={onOpen} />
       </Flex>
-      <Drawer placement="left" size="xs" onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay>
-          <DrawerContent>
-            <DrawerBody p={0} bg="gray.100">
-              <Button w="100%">TOP</Button>
-              <Button w="100%">ユーザー一覧</Button>
-              <Button w="100%">設定</Button>
-            </DrawerBody>
-          </DrawerContent>
-        </DrawerOverlay>
-      </Drawer>
+      <MenuDrawar onClose={onClose} isOpen={isOpen} />
     </>
   );
 });
